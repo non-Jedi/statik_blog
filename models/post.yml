@@ -1,0 +1,5 @@
+title: String
+author: author
+published: DateTime
+content: Content
+is_note: Boolean

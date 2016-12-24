@@ -1,2 +1,9 @@
 project-name: Another Weblog
 base-path: http://adam.thebeckmeyers.xyz/
+context:
+  static:
+    site_title: Adam's stupendously poorly-named blog and some other stuff
+    site_subtitle: I really ought to think up a better name for this
+    site_url: http://adam.thebeckmeyers.xyz
+  dynamic:
+    all_pages: session.query(page).all()

@@ -1,0 +1,7 @@
+path: /articles
+template: index
+context:
+  static:
+    page_title: articles
+  dynamic:
+    posts: session.query(post).filter(not post.is_note).filter(post.published != None).order_by(post.published.desc())

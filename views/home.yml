@@ -1,0 +1,7 @@
+path: /
+template: index
+context:
+  static:
+    page_title: home
+  dynamic:
+    posts: session.query(post).filter(post.published != None).order_by(post.published.desc())[0:25]

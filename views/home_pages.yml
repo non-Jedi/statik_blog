@@ -1,0 +1,10 @@
+path:
+  template: /page/{{ page }}
+  for-each:
+    page: range(1, 1 + len(session.query(post).filter(post.published != None))//25)
+template: index
+context:
+  static:
+    page_title: home
+  dynamic:
+    posts: session.query(post).filter(post.published != None).order_by(post.published.desc())[25*(page-1):25*page-1]
