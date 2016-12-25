@@ -6,19 +6,6 @@
 
 	{% block title %}<title>{{ site_title }}</title>{% endblock title %}
 
-	<!-- make the viewport width equal to the device's native width -->
-	<!-- really just boilerplate for pure css -->
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- CSS -->
-	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />
-	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure/base-min.css" type="text/css" />
-	<!--[if lte IE 8]>
-		<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure/grids-responsive-old-ie-min.css" type="text/css" />
-	<![endif]-->
-	<!--[if gt IE 8]><!-->
-		<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure/grids-responsive-min.css" type="text/css" />
-	<!--<![endif]-->
-
 	{% endblock head %}
 </head>
 
@@ -43,22 +30,17 @@
 	</section>
 
 	<footer>
-
-		<section id="license">
+		<p id="license">
 			This work is licensed under a 
 			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
 			Creative Commons Attribution-ShareAlike 4.0 International License
 			</a>.
-		</section>
-
-		<section id="tools">
+		</p>
+		<p id="tools">
 			Powered by <a href="https://getstatik.com/">Statik</a>.
-			<a href="http://github.com/non-Jedi/statik_blog">
-				Theme and content
-			</a> by 
+			<a href="http://github.com/non-Jedi/statik_blog">Theme and content</a> by
 			<a href="http://adam.thebeckmeyers.xyz">Adam Beckmeyer</a>.
-		</section>
-
+		</p>
 	</footer>
 
 
