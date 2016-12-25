@@ -3,6 +3,3 @@ path:
   for-each:
     post_range: "[(i, session.query(post).filter(post.published != None).order_by(post.published.desc())[25*(i-1):25*i]) for i in range(1, 2 + len(session.query(post).filter(post.published != None).all()) // 25)]"
 template: index
-context:
-  static:
-    page_title: home

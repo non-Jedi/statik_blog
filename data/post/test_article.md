@@ -2,7 +2,6 @@
 title: This is a test article!
 author: adam
 published: 2016-12-24
-is_note: false
 ---
 
 This is an article. It will contain quite a bit of text. What follows

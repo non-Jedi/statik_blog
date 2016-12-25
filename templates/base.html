@@ -1,10 +1,10 @@
 <!DOCTYPE html />
-<html>
+{% block html_tag %}<html>{% endblock html_tag %}
 <head>
 	{% block head %}
 	<meta charset="UTF-8" />
 
-	<title>{% block title %}{{ site_title }}{% endblock title %}</title>
+	{% block title %}<title>{{ site_title }}</title>{% endblock title %}
 
 	<!-- make the viewport width equal to the device's native width -->
 	<!-- really just boilerplate for pure css -->
@@ -25,13 +25,12 @@
 <body>
 
 	<nav><ul>
-
+		<li><a href="{{ site_url }}">home</a></li>
+		<li><a href="{{ site_url }}/notes">notes</a></li>
+		<li><a href="{{ site_url }}/articles">articles</a></li>
 		{% for page in all_pages %}
-			<li>
-				<a href="{{ site_url }}/page/{{ page.title }}">{{ page.title }}</a>
-			</li>
+		<li><a href="{{ site_url }}/page/{{ page.title }}">{{ page.title }}</a></li>
 		{% endfor %}
-
 	</ul></nav>
 
 	<header id="banner">
@@ -40,8 +39,7 @@
 	</header>
 
 	<section class="content">
-		{% block content %}
-		{% endblock %}
+		{% block content %}{% endblock content %}
 	</section>
 
 	<footer>

@@ -1,0 +1,5 @@
+path:
+  template: "/{{ each_post.published|date('%Y/%m/%d') }}/{{ each_post.content[3:24] }}"
+  for-each:
+    each_post: session.query(post).all()
+template: post
