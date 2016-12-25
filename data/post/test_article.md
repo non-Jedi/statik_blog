@@ -1,7 +1,7 @@
 ---
 title: This is a test article!
 author: adam
-published: 2016-12-24T16:35
+published: 2016-12-24
 is_note: false
 ---
 

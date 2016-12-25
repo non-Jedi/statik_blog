@@ -1,47 +1,52 @@
 <!DOCTYPE html />
 <html>
 <head>
-	{% block head %}
+	
 	<meta charset="UTF-8" />
 
-	<title>{% block title %}{{ site_title }}{% endblock title %}</title>
+	<title>Adam's stupendously poorly-named blog and some other stuff</title>
 
 	<!-- make the viewport width equal to the device's native width -->
 	<!-- really just boilerplate for pure css -->
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!-- CSS -->
-	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />
-	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure/base-min.css" type="text/css" />
+	<link rel="stylesheet" href="/theme/css/" type="text/css" />
+	<link rel="stylesheet" href="/theme/css/pure/base-min.css" type="text/css" />
 	<!--[if lte IE 8]>
-		<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure/grids-responsive-old-ie-min.css" type="text/css" />
+		<link rel="stylesheet" href="/theme/css/pure/grids-responsive-old-ie-min.css" type="text/css" />
 	<![endif]-->
 	<!--[if gt IE 8]><!-->
-		<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure/grids-responsive-min.css" type="text/css" />
+		<link rel="stylesheet" href="/theme/css/pure/grids-responsive-min.css" type="text/css" />
 	<!--<![endif]-->
 
-	{% endblock head %}
+	
 </head>
 
 <body>
 
 	<nav><ul>
 
-		{% for page in all_pages %}
+		
 			<li>
-				<a href="{{ site_url }}/page/{{ page.title }}">{{ page.title }}</a>
+				<a href="http://adam.thebeckmeyers.xyz/page/test page">test page</a>
 			</li>
-		{% endfor %}
+		
 
 	</ul></nav>
 
 	<header id="banner">
-		<h1><a href="{{ site_url }}">{{ site_title }}</a></h1>
-		<h2>{{ site_subtitle }}</h2>
+		<h1><a href="http://adam.thebeckmeyers.xyz">Adam's stupendously poorly-named blog and some other stuff</a></h1>
+		<h2>I really ought to think up a better name for this</h2>
 	</header>
 
 	<section class="content">
-		{% block content %}
-		{% endblock %}
+		
+
+<ol>
+	
+</ol>
+
+
 	</section>
 
 	<footer>

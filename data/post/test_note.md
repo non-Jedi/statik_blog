@@ -1,6 +1,6 @@
 ---
 author: adam
-published: 2016-12-24T16:30
+published: 2016-12-24
 is_note: true
 ---
 
