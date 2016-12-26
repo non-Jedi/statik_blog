@@ -2,4 +2,4 @@ path: /
 template: index
 context:
   dynamic:
-    post_range: (1, session.query(post).filter(post.published != None).order_by(post.published.desc())[0:25])
+    post_range: session.query(post).filter(post.published != None).order_by(post.published.desc())[0:25]

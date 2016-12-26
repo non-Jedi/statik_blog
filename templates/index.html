@@ -12,7 +12,7 @@
 
 {% block content %}
 
-{% for each_post in post_range[1] %}
+{% for each_post in post_range %}
 {% if each_post.is_note %}
 	<article class="h-entry note">
 {% else %}

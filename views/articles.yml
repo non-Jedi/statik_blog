@@ -4,4 +4,4 @@ context:
   static:
     page_title: articles
   dynamic:
-    post_range: "(1, session.query(post).filter(post.is_note == None).filter(post.published != None).order_by(post.published.desc())[0:25])"
+    post_range: session.query(post).filter(post.is_note == None).filter(post.published != None).order_by(post.published.desc())[0:25]
