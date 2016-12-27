@@ -1,0 +1,7 @@
+path:
+  template: /notes/page/{{ post_range.number }}
+  for-each:
+    post_range: paginate(session.query(post).filter(post.is_note).filter(post.published != None).order_by(post.published.desc()), 25)
+template: index
+
+
