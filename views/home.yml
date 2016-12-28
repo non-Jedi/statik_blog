@@ -1,5 +1,8 @@
 path: /
-template: index
+template: home
 context:
+  static:
+    home_page: True
+    pre_page_string: ""
   dynamic:
     post_range: session.query(post).filter(post.published != None).order_by(post.published.desc())[0:25]

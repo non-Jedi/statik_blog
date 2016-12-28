@@ -1,0 +1,5 @@
+path:
+  template: "/apage/{{ each_page.title }}"
+  for-each:
+    each_page: session.query(page).all()
+template: apage

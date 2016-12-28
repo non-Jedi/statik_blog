@@ -4,9 +4,9 @@
 
 {% block title %}<title class="p-name">
 	{% if page_title %}
-	{{ page_title }} - {{ site_title }}
+	{{ page_title }}
 	{% else %}
-	{{ site_title }}
+	{{ site_author.first_name }} {{ site_author.last_name }}
 	{% endif %}
 </title>{% endblock title %}
 
@@ -29,5 +29,19 @@
 		</aside>
 	</article>
 {% endfor %}
+
+<div class="pages">
+{% if home_page %}
+<a href="{{ site_url + pre_page_string }}/page/2">&gt;</a>
+{% else %}
+{% if post_range.number != 1 %}
+<a href="{{ site_url + pre_page_string }}/page/{{ post_range.number - 1 }}">&lt;</a>
+{% endif %}
+{% if post_range.number < post_range.total_pages %}
+<a href="{{ site_url + pre_page_string }}/page/{{ post_range.number + 1 }}">&gt;</a>
+{% endif %}
+{% endif %}
+
+</div>
 
 {% endblock content %}

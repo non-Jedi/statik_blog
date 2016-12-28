@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}<title>
+	{{ each_page.title }}
+</title>{% endblock title %}
+
+{% block content %}
+
+<article class="h-entry">
+	{{ each_page.content }}
+	<aside>
+		<ul>
+			<li class="p-author"><a href="{{ each_page.author.url }}">{{ each_page.author.first_name }}</a></li>
+			<li class="u-url"><a href="{{ site_url }}/apage/{{ each_page.title }}">permalink</a></li>
+			<li class="dt-published">{{ each_page.published|date("%Y/%m/%d") }}</li>
+		</ul>
+	</aside>
+</article>
+
+{% endblock content %}

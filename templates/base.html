@@ -4,7 +4,7 @@
 	{% block head %}
 	<meta charset="UTF-8" />
 
-	{% block title %}<title>{{ site_title }}</title>{% endblock title %}
+	{% block title %}<title>{{ site_author.first_name }} {{ site_author.last_name }}</title>{% endblock title %}
 
 	{% endblock head %}
 </head>
@@ -16,12 +16,12 @@
 		<li><a href="{{ site_url }}/notes">notes</a></li>
 		<li><a href="{{ site_url }}/articles">articles</a></li>
 		{% for page in all_pages %}
-		<li><a href="{{ site_url }}/page/{{ page.title }}">{{ page.title }}</a></li>
+		<li><a href="{{ site_url }}/apage/{{ page.title }}">{{ page.title }}</a></li>
 		{% endfor %}
 	</ul></nav>
 
 	<header id="banner">
-		<h1><a href="{{ site_url }}">{{ site_title }}</a></h1>
+		<h1><a href="{{ site_url }}">{{ site_author.first_name }} {{ site_author.last_name }}</a></h1>
 		<h2>{{ site_subtitle }}</h2>
 	</header>
 

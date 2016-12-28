@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<p class="h-card">
+	<img class="u-logo" src="{{ site_url }}/assets/logo.png" />
+	<a class="p-name u-url" href="{{ site_url }}" rel="me">
+		{{ site_author.first_name }} {{ site_author.last_name }}</a> is a
+	<span class="p-job-title">chemical engineer</span>, a father, and a
+	devout christian living in <span class="p-locality">Vienna</span>,
+	<span class="p-region">West Virginia</span>. My interests include
+	programming, theology and generally learning new things. Hit me up
+	any time at 
+	<a class="u-impp" href="https://matrix.to/#/@abeckmeyer:matrix.org">
+		@abeckmeyer:matrix.org</a>.
+</p>
+
+{{ super() }}
+{% endblock content %}

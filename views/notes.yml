@@ -2,6 +2,8 @@ path: /notes
 template: index
 context:
   static:
+    home_page: True
     page_title: notes
+    pre_page_string: /notes
   dynamic:
     post_range: session.query(post).filter(post.is_note).filter(post.published != None).order_by(post.published.desc())[0:25]
