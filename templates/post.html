@@ -4,13 +4,18 @@
 <article class="h-entry">
 	{% if not each_post.is_note %}
 	<h3 class="p-name">{{ each_post.title }}</h3>
-	{% endif %}
 	<div class="e-content">{{ each_post.content }}</div>
+	{% else %}
+	<div class="e-content p-name">{{ each_post.content }}</div>
+	{% endif %}
 	<aside>
 		<ul>
-			<li class="p-author"><a href="{{ each_post.author.url }}">{{ each_post.author.first_name }}</a></li>
+			<li class="p-author h-card"><a href="{{ each_post.author.url }}">{{ each_post.author.first_name }}</a></li>
 			<li class="u-url"><a href="{{ site_url }}/{{ each_post.published|date("%Y/%m/%d") }}/{{ each_post.content[3:24] }}">permalink</a></li>
-			<li class="dt-published">{{ each_post.published|date("%Y/%m/%d") }}</li>
+			<li class="dt-published">
+				<time datetime="{{ each_post.published|date("%Y/%m/%dT%H:%M%z") }}">
+					{{ each_post.published|date("%Y/%m/%d") }}
+			</time></li>
 		</ul>
 	</aside>
 </article>

@@ -1,8 +1,8 @@
-project-name: Another Weblog
+project-name: adam.thebeckmeyers.xyz
 base-path: http://adam.thebeckmeyers.xyz/
 context:
   static:
-    site_subtitle: The one and only; the stupendously vain
+    site_subtitle: Based on a true story
     site_url: http://adam.thebeckmeyers.xyz
   dynamic:
     all_pages: session.query(page).all()

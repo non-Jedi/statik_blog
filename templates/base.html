@@ -12,9 +12,9 @@
 <body>
 
 	<nav><ul>
-		<li><a href="{{ site_url }}">home</a></li>
-		<li><a href="{{ site_url }}/notes">notes</a></li>
-		<li><a href="{{ site_url }}/articles">articles</a></li>
+		<li><a rel="feed" href="{{ site_url }}">home</a></li>
+		<li><a rel="feed" href="{{ site_url }}/notes">notes</a></li>
+		<li><a rel="feed" href="{{ site_url }}/articles">articles</a></li>
 		{% for page in all_pages %}
 		<li><a href="{{ site_url }}/apage/{{ page.title }}">{{ page.title }}</a></li>
 		{% endfor %}
