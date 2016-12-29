@@ -2,13 +2,15 @@
 
 {% block html_tag %}<html class="h-feed">{% endblock html_tag %}
 
-{% block title %}<title class="p-name">
+{% block title %}
+<title class="p-name">
 	{% if page_title %}
 	{{ page_title }}
 	{% else %}
 	{{ site_author.first_name }} {{ site_author.last_name }}
 	{% endif %}
-</title>{% endblock title %}
+</title>
+{% endblock title %}
 
 {% block content %}
 
@@ -28,24 +30,24 @@
 				<li class="dt-published">
 					<time datetime="{{ each_post.published|date("%Y/%m/%dT%H:%M%z") }}">
 						{{ each_post.published|date("%Y/%m/%d") }}
-				</time></li>
+					</time>
+				</li>
 			</ul>
 		</aside>
 	</article>
 {% endfor %}
 
-<div class="pages">
-{% if home_page %}
-<a rel="next" href="{{ site_url + pre_page_string }}/page/2">&gt;</a>
-{% else %}
-{% if post_range.number != 1 %}
-<a rel="prev" href="{{ site_url + pre_page_string }}/page/{{ post_range.number - 1 }}">&lt;</a>
-{% endif %}
-{% if post_range.number < post_range.total_pages %}
-<a rel="next" href="{{ site_url + pre_page_string }}/page/{{ post_range.number + 1 }}">&gt;</a>
-{% endif %}
-{% endif %}
-
+<div class="pagination">
+	{% if home_page %}
+	<a rel="next" href="{{ site_url + pre_page_string }}/page/2">&gt;</a>
+	{% else %}
+	{% if post_range.number != 1 %}
+	<a rel="prev" href="{{ site_url + pre_page_string }}/page/{{ post_range.number - 1 }}">&lt;</a>
+	{% endif %}
+	{% if post_range.number < post_range.total_pages %}
+	<a rel="next" href="{{ site_url + pre_page_string }}/page/{{ post_range.number + 1 }}">&gt;</a>
+	{% endif %}
+	{% endif %}
 </div>
 
 {% endblock content %}
