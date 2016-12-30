@@ -1,5 +1,4 @@
-{% extends "base.html" %}
-
+{% extends "base.html" %} 
 {% block html_tag %}<html class="h-feed">{% endblock html_tag %}
 
 {% block title %}
@@ -26,7 +25,7 @@
 		<aside>
 			<ul>
 				<li class="p-author h-card"><a href="{{ each_post.author.url }}">{{ each_post.author.first_name }}</a></li>
-				<li class="u-url"><a href="{{ site_url }}/{{ each_post.published|date("%Y/%m/%d") }}/{{ each_post.content[3:24] }}">permalink</a></li>
+				<li class="u-url"><a href="{{ site_url }}/{{ each_post.published|date("%Y/%m/%d") }}/{{ '-'.join(each_post.content[3:].split()[0:5]) }}">permalink</a></li>
 				<li class="dt-published">
 					<time datetime="{{ each_post.published|date("%Y/%m/%dT%H:%M%z") }}">
 						{{ each_post.published|date("%Y/%m/%d") }}

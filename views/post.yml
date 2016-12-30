@@ -1,5 +1,5 @@
 path:
-  template: "/{{ each_post.published|date('%Y/%m/%d') }}/{{ each_post.content[3:24] }}"
+  template: "/{{ each_post.published|date('%Y/%m/%d') }}/{{ '-'.join(each_post.content[3:].split()[0:5]) }}"
   for-each:
     each_post: session.query(post).all()
 template: post
