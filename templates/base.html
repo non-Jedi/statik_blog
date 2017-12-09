@@ -1,5 +1,5 @@
-<!DOCTYPE html />
-{% block html_tag %}<html>{% endblock html_tag %}
+<!DOCTYPE html>
+{% block html_tag %}<html lang="en">{% endblock html_tag %}
 <head>
 	{% block head %}
 	<meta charset="UTF-8" />
@@ -13,23 +13,20 @@
 
 <body>
 
-	<nav><ul>
-		<li><a rel="feed" href="{{ site_url }}">home</a></li>
-		<li><a rel="feed" href="{{ site_url }}/notes">notes</a></li>
-		<li><a rel="feed" href="{{ site_url }}/articles">articles</a></li>
-		{% for page in all_pages %}
-		<li><a href="{{ site_url }}/apage/{{ page.title }}">{{ page.title }}</a></li>
-		{% endfor %}
-	</ul></nav>
-
-	<header id="banner">
-		<h1><a href="{{ site_url }}">{{ site_author.first_name }} {{ site_author.last_name }}</a></h1>
-		<h2>{{ site_subtitle }}</h2>
+  <header>
+		<h1 id="banner"><a href="{{ site_url }}">{{ site_author.first_name }} {{ site_author.last_name }}</a></h1>
+		<p>{{ site_subtitle }}</p>
+    <nav><ul>
+        <li><a href="{% url "home" %}">home</a></li>
+        <li><a href="{% url "notes" %}">notes</a></li>
+        <li><a href="{% url "articles" %}">articles</a></li>
+        {% for page in all_pages %}
+        <li><a href="{% url "apage", page %}">{{ page.title }}</a></li>
+        {% endfor %}
+    </ul></nav>
 	</header>
 
-	<section class="content">
 		{% block content %}{% endblock content %}
-	</section>
 
 	<footer>
 		<p id="license">

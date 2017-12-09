@@ -8,15 +8,15 @@
 	{% else %}
 	<div class="e-content p-name">{{ each_post.content }}</div>
 	{% endif %}
-	<aside>
+	<footer>
 		<ul>
 			<li class="p-author h-card"><a href="{{ each_post.author.url }}">{{ each_post.author.first_name }}</a></li>
-			<li class="u-url"><a href="{{ site_url }}/{{ each_post.published|date("%Y/%m/%d") }}/{{ each_post.content[3:24] }}">permalink</a></li>
+			<li class="u-url"><a href="{% url "post", each_post %}">permalink</a></li>
 			<li class="dt-published">
-				<time datetime="{{ each_post.published|date("%Y/%m/%dT%H:%M%z") }}">
+				<time datetime="{{ each_post.published|date("%Y-%m-%dT%H:%M%z") }}">
 					{{ each_post.published|date("%Y/%m/%d") }}
 			</time></li>
 		</ul>
-	</aside>
+	</footer>
 </article>
 {% endblock content %}

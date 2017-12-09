@@ -7,7 +7,7 @@ url: http://adam.thebeckmeyers.xyz
 
 <div class="h-card p-author">
 
-	<img class="u-logo u-photo" src="http://adam.thebeckmeyers.xyz/assets/logo.png" />
+	<img class="u-logo u-photo" src="http://adam.thebeckmeyers.xyz/assets/logo.png" alt="Adam Beckmeyer Logo" />
 	<p class="p-note"><a class="p-name u-url" href="http://adam.thebeckmeyers.xyz" rel="me">
 		Adam Beckmeyer</a> is a
 	<span class="p-job-title">chemical engineer</span>, a father, and a

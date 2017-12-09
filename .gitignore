@@ -1,1 +1,6 @@
-output*
+public/*
+bin/*
+include/*
+lib/*
+pip-selfcheck.json
+

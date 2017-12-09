@@ -1,5 +1,4 @@
 project-name: adam.thebeckmeyers.xyz
-base-path: http://adam.thebeckmeyers.xyz/
 context:
   static:
     site_subtitle: Based on a true story
